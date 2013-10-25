@@ -1,0 +1,40 @@
+Creating, Updating and removing of PATH environment variable
+
+One of the simplest way to add path to PATH variable is by exporting it in command line by:
+
+export PATH=/path/to/add
+
+this sets new path. But remember that only in current terminal session. To add to the front or the end of currently
+existing path use:
+
+export PATH=$PATH:/path/to/add or export PATH=/path/to/add:$PATH
+
+To check out PATH settings type:
+
+echo $PATH
+
+Profiles
+
+Everytime, when new Terminal session is started, setting of environmental variables is needed. These profile files may be located 
+in following locations:
+
+/etc/.bashrc
+/etc/profile
+~/.bashrc
+~/.bash_profile
+~/.profile
+~/.MacOSX/environment.plist
+
+Parts from which PATH is assembled
+
+PATH parts are stored in:
+
+/etc/paths
+/etc/paths.d
+/etc/manpaths
+/etc/manpaths.d
+
+and for current User also in
+
+~/.MacOSX/environment.plist
+
